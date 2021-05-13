@@ -5,7 +5,7 @@ from urllib.parse import quote
 def maketable():
     res = {}
 
-    for child in Path(".").parent.iterdir():
+    for child in Path(".").parent.joinpath("leetcode").iterdir():
         if child.suffix == ".md":
             if child.stem == "README":
                 continue
@@ -21,7 +21,7 @@ def maketable():
     for key in sorted(res):
         row = "|"
         row += str(key) + "|"
-        row += f"[{res[key][0]}](./{quote(res[key][2])})|"
+        row += f"[{res[key][0]}](./leetcode/{quote(res[key][2])})|"
         row += res[key][1] + "|"
         table.append(row)
 
