@@ -52,6 +52,7 @@
 | 304  | [Range Sum Query 2D - Immutable](./leetcode/304.%20Range%20Sum%20Query%202D%20-%20Immutable%20%28Medium%29.md)                         | Medium     | DP                        |
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                       | Easy       | Math, Hash Table          |
 | 120  | [Triangle](./leetcode/120.%20Triangle%20%28Medium%29.md)                                                                               | Medium     |                           |
+| 114  | [Flatten Binary Tree to Linked List](./leetcode/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List%20%28Medium%29.md)                 | Medium     | DFS, Tree                 |
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md) | Medium     | Linked List, DFS          |
 | 86   | [Partition List](./leetcode/86.%20Partition%20List%20%28Medium%29.md)                                                                  | Medium     |                           |
 | 63   | [Unique Paths II](./leetcode/63.%20Unique%20Paths%20II%20%28Medium%29.md)                                                              | Medium     |                           |
