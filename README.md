@@ -51,6 +51,8 @@
 | 589  | [N-ary Tree Preorder Traversal](./leetcode/589.%20N-ary%20Tree%20Preorder%20Traversal%20%28Easy%29.md)                                 | Easy       |                           |
 | 583  | [Delete Operation for Two Strings](./leetcode/583.%20Delete%20Operation%20for%20Two%20Strings%20%28Medium%29.md)                       | Medium     | String                    |
 | 509  | [Fibonacci Number](./leetcode/509.%20Fibonacci%20Number%20%28Easy%29.md)                                                               | Easy       |                           |
+| 462  | [Minimum Moves to Equal Array Elements II](./leetcode/462.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20II%20%28Medium%29.md)   | Medium     | Math                      |
+| 453  | [Minimum Moves to Equal Array Elements](./leetcode/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20%28Easy%29.md)             | Easy       | Math                      |
 | 341  | [Flatten Nested List Iterator](./leetcode/341.%20Flatten%20Nested%20List%20Iterator%20%28Medium%29.md)                                 | Medium     |                           |
 | 304  | [Range Sum Query 2D - Immutable](./leetcode/304.%20Range%20Sum%20Query%202D%20-%20Immutable%20%28Medium%29.md)                         | Medium     | DP                        |
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                       | Easy       | Math, Hash Table          |
