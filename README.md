@@ -4,6 +4,13 @@
 
 一些没理解的点暂时做一下记录，方便有时间来研究。
 
+**NOT SOLVED!!**
+
+1. [943] FInd the Shortest Superstring - Hadr
+   - TSP
+
+**SOLVED but further research needed**
+
 1. [509] Fibonacci Number - Easy
    - Official Solution: Matrix Exponentiation, complexity (time/space) O(log n) / O(log n)
    - Official Solution: Golden Ratio/Binet's Formula, complexity (time/space) O(1) / O(1)
@@ -41,9 +48,12 @@
 | 1048 | [Longest String Chain](./leetcode/1048.%20Longest%20String%20Chain%20%28Medium%29.md)                                                  | Medium     | Hash Table, DP            |
 | 970  | [Powerful Integers](./leetcode/970.%20Powerful%20Integers%20%28Medium%29.md)                                                           | Medium     |                           |
 | 968  | [Binary Tree Cameras](./leetcode/968.%20Binary%20Tree%20Cameras%20%28Hard%29.md)                                                       | Hard       | DP, Greedy                |
+| 943  | [Find the Shortest Superstring](./leetcode/943.%20Find%20the%20Shortest%20Superstring%20%28Hard%29.md)                                 | Hard       | DP                        |
 | 906  | [Super Palindromes](./leetcode/906.%20Super%20Palindromes%20%28Hard%29.md)                                                             | Hard       | Math                      |
+| 890  | [Find and Replace Pattern](./leetcode/890.%20Find%20and%20Replace%20Pattern%20%28Medium%29.md)                                         | Medium     | String                    |
 | 816  | [Ambiguous Coordinates](./leetcode/816.%20Ambiguous%20Coordinates%20%28Medium%29.md)                                                   | Medium     | String                    |
 | 745  | [Prefix and Suffix Search](./leetcode/745.%20Prefix%20and%20Suffix%20Search%20%28Hard%29.md)                                           | Hard       | Trie                      |
+| 709  | [To Lower Case](./leetcode/709.%20To%20Lower%20Case%20%28Easy%29.md)                                                                   | Easy       | String                    |
 | 667  | [Beautiful Arrangement II](./leetcode/667.%20Beautiful%20Arrangement%20II%20%28Medium%29.md)                                           | Medium     |                           |
 | 665  | [Non-decreasing Array](./leetcode/665.%20Non-decreasing%20Array%20%28Medium%29.md)                                                     | Medium     | Array                     |
 | 630  | [Course Schedule III](./leetcode/630.%20Course%20Schedule%20III%20%28Hard%29.md)                                                       | Hard       | Array, DFS, Graph, BFS    |
@@ -59,10 +69,12 @@
 | 120  | [Triangle](./leetcode/120.%20Triangle%20%28Medium%29.md)                                                                               | Medium     |                           |
 | 114  | [Flatten Binary Tree to Linked List](./leetcode/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List%20%28Medium%29.md)                 | Medium     | DFS, Tree                 |
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md) | Medium     | Linked List, DFS          |
+| 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                     | Medium     | Tree, BFS                 |
 | 86   | [Partition List](./leetcode/86.%20Partition%20List%20%28Medium%29.md)                                                                  | Medium     |                           |
 | 65   | [Valid Number](./leetcode/65.%20Valid%20Number%20%28Hard%29.md)                                                                        | Hard       | Math, String              |
 | 63   | [Unique Paths II](./leetcode/63.%20Unique%20Paths%20II%20%28Medium%29.md)                                                              | Medium     |                           |
 | 62   | [Unique Paths](./leetcode/62.%20Unique%20Paths%20%28Medium%29.md)                                                                      | Medium     |                           |
+| 51   | [N-Queens](./leetcode/51.%20N-Queens%20%28Hard%29.md)                                                                                  | Hard       | Backtracking              |
 | 48   | [Rotate Image](./leetcode/48.%20Rotate%20Image%20%28Medium%29.md)                                                                      | Medium     |                           |
 | 45   | [Jump Game II](./leetcode/45.%20Jump%20Game%20II%20%28Medium%29.md)                                                                    | Medium     | Array, Greedy             |
 | 39   | [Combination Sum](./leetcode/39.%20Combination%20Sum%20%28Medium%29.md)                                                                | Medium     |                           |
