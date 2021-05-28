@@ -38,6 +38,7 @@
 
 | #    | Title                                                                                                                                                               | Difficulty | Topics                    |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- |
+| 1695 | [Maximum Erasure Value](./leetcode/1695.%20Maximum%20Erasure%20Value%20%28Medium%29.md)                                                                             | Medium     | Two Pointers              |
 | 1689 | [Partitioning Into Minimum Number Of Deci-Binary Numbers](./leetcode/1689.%20Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers%20%28Medium%29.md) | Medium     | Greedy                    |
 | 1642 | [Furthest Building You Can Reach](./leetcode/1642.%20Furthest%20Building%20You%20Can%20Reach%20%28Medium%29.md)                                                     | Medium     | Binary Search, Heap       |
 | 1480 | [Running Sum of 1d Array](./leetcode/1480.%20Running%20Sum%20of%201d%20Array%20%28Easy%29.md)                                                                       | Easy       | Array                     |
@@ -65,6 +66,7 @@
 | 462  | [Minimum Moves to Equal Array Elements II](./leetcode/462.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20II%20%28Medium%29.md)                                | Medium     | Math                      |
 | 453  | [Minimum Moves to Equal Array Elements](./leetcode/453.%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20%28Easy%29.md)                                          | Easy       | Math                      |
 | 341  | [Flatten Nested List Iterator](./leetcode/341.%20Flatten%20Nested%20List%20Iterator%20%28Medium%29.md)                                                              | Medium     |                           |
+| 318  | [Maximum Product of Word Lengths](./leetcode/318.%20Maximum%20Product%20of%20Word%20Lengths%20%28Medium%29.md)                                                      | Medium     | Bit Manipulation          |
 | 304  | [Range Sum Query 2D - Immutable](./leetcode/304.%20Range%20Sum%20Query%202D%20-%20Immutable%20%28Medium%29.md)                                                      | Medium     | DP                        |
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                                                    | Easy       | Math, Hash Table          |
 | 150  | [Evaluate Reverse Polish Notation](./leetcode/150.%20Evaluate%20Reverse%20Polish%20Notation%20%28Medium%29.md)                                                      | Medium     | Stack                     |
@@ -76,6 +78,7 @@
 | 65   | [Valid Number](./leetcode/65.%20Valid%20Number%20%28Hard%29.md)                                                                                                     | Hard       | Math, String              |
 | 63   | [Unique Paths II](./leetcode/63.%20Unique%20Paths%20II%20%28Medium%29.md)                                                                                           | Medium     |                           |
 | 62   | [Unique Paths](./leetcode/62.%20Unique%20Paths%20%28Medium%29.md)                                                                                                   | Medium     |                           |
+| 52   | [N-Queens II](./leetcode/52.%20N-Queens%20II%20%28Hard%29.md)                                                                                                       | Hard       | Backtracking              |
 | 51   | [N-Queens](./leetcode/51.%20N-Queens%20%28Hard%29.md)                                                                                                               | Hard       | Backtracking              |
 | 48   | [Rotate Image](./leetcode/48.%20Rotate%20Image%20%28Medium%29.md)                                                                                                   | Medium     |                           |
 | 45   | [Jump Game II](./leetcode/45.%20Jump%20Game%20II%20%28Medium%29.md)                                                                                                 | Medium     | Array, Greedy             |
