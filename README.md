@@ -36,6 +36,10 @@
 
 ### TOC
 
+| Total | Easy | Medium | Hard |
+| :---: | :--: | :----: | :--: |
+|  54   |  7   |   34   |  13  |
+
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                    |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- |
 | 1695 | [Maximum Erasure Value](./leetcode/1695.%20Maximum%20Erasure%20Value%20%28Medium%29.md)                                                                                                             | Medium     | Two Pointers              |
@@ -44,6 +48,7 @@
 | 1480 | [Running Sum of 1d Array](./leetcode/1480.%20Running%20Sum%20of%201d%20Array%20%28Easy%29.md)                                                                                                       | Easy       | Array                     |
 | 1465 | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](./leetcode/1465.%20Maximum%20Area%20of%20a%20Piece%20of%20Cake%20After%20Horizontal%20and%20Vertical%20Cuts%20%28Medium%29.md) | Medium     | Array                     |
 | 1423 | [Maximum Points You Can Obtain from Cards](./leetcode/1423.%20Maximum%20Points%20You%20Can%20Obtain%20from%20Cards%20%28Medium%29.md)                                                               | Medium     | Array, DP, Sliding Window |
+| 1383 | [Maximum Performance of a Team](./leetcode/1383.%20Maximum%20Performance%20of%20a%20Team%20%28Hard%29.md)                                                                                           | Hard       | Greedy, Sort              |
 | 1354 | [Construct Target Array With Multiple Sums](./leetcode/1354.%20Construct%20Target%20Array%20With%20Multiple%20Sums%20%28Hard%29.md)                                                                 | Hard       | Greedy                    |
 | 1302 | [Deepest Leaves Sum](./leetcode/1302.%20Deepest%20Leaves%20Sum%20%28Medium%29.md)                                                                                                                   | Medium     |                           |
 | 1192 | [Critical Connections in a Network](./leetcode/1192.%20Critical%20Connections%20in%20a%20Network%20%28Hard%29.md)                                                                                   | Hard       |                           |
@@ -56,6 +61,7 @@
 | 890  | [Find and Replace Pattern](./leetcode/890.%20Find%20and%20Replace%20Pattern%20%28Medium%29.md)                                                                                                      | Medium     | String                    |
 | 816  | [Ambiguous Coordinates](./leetcode/816.%20Ambiguous%20Coordinates%20%28Medium%29.md)                                                                                                                | Medium     | String                    |
 | 752  | [Open the Lock](./leetcode/752.%20Open%20the%20Lock%20%28Medium%29.md)                                                                                                                              | Medium     | BFS                       |
+| 746  | [Min Cost Climbing Stairs](./leetcode/746.%20Min%20Cost%20Climbing%20Stairs%20%28Easy%29.md)                                                                                                        | Easy       | Array, DP                 |
 | 745  | [Prefix and Suffix Search](./leetcode/745.%20Prefix%20and%20Suffix%20Search%20%28Hard%29.md)                                                                                                        | Hard       | Trie                      |
 | 709  | [To Lower Case](./leetcode/709.%20To%20Lower%20Case%20%28Easy%29.md)                                                                                                                                | Easy       | String                    |
 | 695  | [Max Area of Island](./leetcode/695.%20Max%20Area%20of%20Island%20%28Medium%29.md)                                                                                                                  | Medium     | Array, DFS                |
@@ -74,10 +80,12 @@
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                                                                                    | Easy       | Math, Hash Table          |
 | 164  | [Maximum Gap](./leetcode/164.%20Maximum%20Gap%20%28Hard%29.md)                                                                                                                                      | Hard       | Sort                      |
 | 150  | [Evaluate Reverse Polish Notation](./leetcode/150.%20Evaluate%20Reverse%20Polish%20Notation%20%28Medium%29.md)                                                                                      | Medium     | Stack                     |
+| 128  | [Longest Consecutive Sequence](./leetcode/128.%20Longest%20Consecutive%20Sequence%20%28Medium%29.md)                                                                                                | Medium     | Array, Union Find         |
 | 120  | [Triangle](./leetcode/120.%20Triangle%20%28Medium%29.md)                                                                                                                                            | Medium     |                           |
 | 114  | [Flatten Binary Tree to Linked List](./leetcode/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List%20%28Medium%29.md)                                                                              | Medium     | DFS, Tree                 |
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md)                                                              | Medium     | Linked List, DFS          |
 | 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS                 |
+| 97   | [Interleaving String](./leetcode/97.%20Interleaving%20String%20%28Medium%29.md)                                                                                                                     | Medium     | String, DP                |
 | 86   | [Partition List](./leetcode/86.%20Partition%20List%20%28Medium%29.md)                                                                                                                               | Medium     |                           |
 | 65   | [Valid Number](./leetcode/65.%20Valid%20Number%20%28Hard%29.md)                                                                                                                                     | Hard       | Math, String              |
 | 63   | [Unique Paths II](./leetcode/63.%20Unique%20Paths%20II%20%28Medium%29.md)                                                                                                                           | Medium     |                           |
