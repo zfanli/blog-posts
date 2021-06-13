@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  56   |  7   |   35   |  14  |
+|  57   |  7   |   36   |  14  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                    |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- |
@@ -88,6 +88,7 @@
 | 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS                 |
 | 97   | [Interleaving String](./leetcode/97.%20Interleaving%20String%20%28Medium%29.md)                                                                                                                     | Medium     | String, DP                |
 | 86   | [Partition List](./leetcode/86.%20Partition%20List%20%28Medium%29.md)                                                                                                                               | Medium     |                           |
+| 77   | [Combinations](./leetcode/77.%20Combinations%20%28Medium%29.md)                                                                                                                                     | Medium     | Backtracking              |
 | 65   | [Valid Number](./leetcode/65.%20Valid%20Number%20%28Hard%29.md)                                                                                                                                     | Hard       | Math, String              |
 | 63   | [Unique Paths II](./leetcode/63.%20Unique%20Paths%20II%20%28Medium%29.md)                                                                                                                           | Medium     |                           |
 | 62   | [Unique Paths](./leetcode/62.%20Unique%20Paths%20%28Medium%29.md)                                                                                                                                   | Medium     |                           |
