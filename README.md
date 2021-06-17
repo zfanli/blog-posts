@@ -38,10 +38,11 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  57   |  7   |   36   |  14  |
+|  59   |  8   |   37   |  14  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                    |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- |
+| 1710 | [Maximum Units on a Truck](./leetcode/1710.%20Maximum%20Units%20on%20a%20Truck%20%28Easy%29.md)                                                                                                     | Easy       | Greedy, Sort              |
 | 1696 | [Jump Game VI](./leetcode/1696.%20Jump%20Game%20VI%20%28Medium%29.md)                                                                                                                               | Medium     | Dequeue                   |
 | 1695 | [Maximum Erasure Value](./leetcode/1695.%20Maximum%20Erasure%20Value%20%28Medium%29.md)                                                                                                             | Medium     | Two Pointers              |
 | 1689 | [Partitioning Into Minimum Number Of Deci-Binary Numbers](./leetcode/1689.%20Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers%20%28Medium%29.md)                                 | Medium     | Greedy                    |
@@ -98,4 +99,5 @@
 | 45   | [Jump Game II](./leetcode/45.%20Jump%20Game%20II%20%28Medium%29.md)                                                                                                                                 | Medium     | Array, Greedy             |
 | 39   | [Combination Sum](./leetcode/39.%20Combination%20Sum%20%28Medium%29.md)                                                                                                                             | Medium     |                           |
 | 37   | [Sudoku Solver](./leetcode/37.%20Sudoku%20Solver%20%28Hard%29.md)                                                                                                                                   | Hard       | Hash Table, Backtracking  |
+| 22   | [Generate Parentheses](./leetcode/22.%20Generate%20Parentheses%20%28Medium%29.md)                                                                                                                   | Medium     | String, Backtracking      |
 | 19   | [Remove Nth Node From End of List](./leetcode/19.%20Remove%20Nth%20Node%20From%20End%20of%20List%20%28Medium%29.md)                                                                                 | Medium     |                           |
