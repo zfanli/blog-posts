@@ -40,8 +40,22 @@ def maketable():
     table.append("|#|Title|Difficulty|Topics|")
     table.append("")
 
+    table.append(
+        f"|{len(res)}|{len(list(filter(lambda x: res[x][1] == 'Easy', res)))}|{len(list(filter(lambda x: res[x][1] == 'Medium', res)))}|{len(list(filter(lambda x: res[x][1] == 'Hard', res)))}|"
+    )
+    table.append("|:-:|:-:|:-:|:-:|")
+    table.append("|Total|Easy|Medium|Hard|")
+    table.append("")
+
     return "\n".join(reversed(table))
 
 
 if __name__ == "__main__":
-    print(maketable())
+    toc = maketable()
+    with open("README.md", "r") as f:
+        ctn = [x[:-1] for x in f.readlines()]
+        ctn = ctn[: ctn.index("### TOC") + 1]
+        ctn.append(toc)
+        toc = "\n".join(ctn)
+    with open("README.md", "w") as f:
+        f.write(toc)
