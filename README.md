@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  62   |  9   |   38   |  15  |
+|  64   |  9   |   40   |  15  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                               |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
@@ -62,6 +62,7 @@
 | 906  | [Super Palindromes](./leetcode/906.%20Super%20Palindromes%20%28Hard%29.md)                                                                                                                          | Hard       | Math                                 |
 | 890  | [Find and Replace Pattern](./leetcode/890.%20Find%20and%20Replace%20Pattern%20%28Medium%29.md)                                                                                                      | Medium     | String                               |
 | 816  | [Ambiguous Coordinates](./leetcode/816.%20Ambiguous%20Coordinates%20%28Medium%29.md)                                                                                                                | Medium     | String                               |
+| 792  | [Number of Matching Subsequences](./leetcode/792.%20Number%20of%20Matching%20Subsequences%20%28Medium%29.md)                                                                                        | Medium     | Array                                |
 | 778  | [Swim in Rising Water](./leetcode/778.%20Swim%20in%20Rising%20Water%20%28Hard%29.md)                                                                                                                | Hard       | Binary Search, Heap, DFS, Union Fold |
 | 752  | [Open the Lock](./leetcode/752.%20Open%20the%20Lock%20%28Medium%29.md)                                                                                                                              | Medium     | BFS                                  |
 | 746  | [Min Cost Climbing Stairs](./leetcode/746.%20Min%20Cost%20Climbing%20Stairs%20%28Easy%29.md)                                                                                                        | Easy       | Array, DP                            |
@@ -91,6 +92,7 @@
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md)                                                              | Medium     | Linked List, DFS                     |
 | 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS                            |
 | 97   | [Interleaving String](./leetcode/97.%20Interleaving%20String%20%28Medium%29.md)                                                                                                                     | Medium     | String, DP                           |
+| 92   | [Reverse Linked List II](./leetcode/92.%20Reverse%20Linked%20List%20II%20%28Medium%29.md)                                                                                                           | Medium     | Linked List                          |
 | 86   | [Partition List](./leetcode/86.%20Partition%20List%20%28Medium%29.md)                                                                                                                               | Medium     |                                      |
 | 77   | [Combinations](./leetcode/77.%20Combinations%20%28Medium%29.md)                                                                                                                                     | Medium     | Backtracking                         |
 | 65   | [Valid Number](./leetcode/65.%20Valid%20Number%20%28Hard%29.md)                                                                                                                                     | Hard       | Math, String                         |
