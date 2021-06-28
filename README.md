@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  64   |  9   |   40   |  15  |
+|  66   |  10  |   40   |  16  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                               |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------ |
@@ -56,6 +56,7 @@
 | 1192 | [Critical Connections in a Network](./leetcode/1192.%20Critical%20Connections%20in%20a%20Network%20%28Hard%29.md)                                                                                   | Hard       |                                      |
 | 1074 | [Number of Submatrices That Sum to Target](./leetcode/1074.%20Number%20of%20Submatrices%20That%20Sum%20to%20Target%20%28Hard%29.md)                                                                 | Hard       |                                      |
 | 1048 | [Longest String Chain](./leetcode/1048.%20Longest%20String%20Chain%20%28Medium%29.md)                                                                                                               | Medium     | Hash Table, DP                       |
+| 1047 | [Remove All Adjacent Duplicates In String](./leetcode/1047.%20Remove%20All%20Adjacent%20Duplicates%20In%20String%20%28Easy%29.md)                                                                   | Easy       | String, Stack                        |
 | 970  | [Powerful Integers](./leetcode/970.%20Powerful%20Integers%20%28Medium%29.md)                                                                                                                        | Medium     |                                      |
 | 968  | [Binary Tree Cameras](./leetcode/968.%20Binary%20Tree%20Cameras%20%28Hard%29.md)                                                                                                                    | Hard       | DP, Greedy                           |
 | 943  | [Find the Shortest Superstring](./leetcode/943.%20Find%20the%20Shortest%20Superstring%20%28Hard%29.md)                                                                                              | Hard       | DP                                   |
@@ -85,6 +86,7 @@
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                                                                                    | Easy       | Math, Hash Table                     |
 | 164  | [Maximum Gap](./leetcode/164.%20Maximum%20Gap%20%28Hard%29.md)                                                                                                                                      | Hard       | Sort                                 |
 | 150  | [Evaluate Reverse Polish Notation](./leetcode/150.%20Evaluate%20Reverse%20Polish%20Notation%20%28Medium%29.md)                                                                                      | Medium     | Stack                                |
+| 135  | [Candy](./leetcode/135.%20Candy%20%28Hard%29.md)                                                                                                                                                    | Hard       | Array, Greedy                        |
 | 128  | [Longest Consecutive Sequence](./leetcode/128.%20Longest%20Consecutive%20Sequence%20%28Medium%29.md)                                                                                                | Medium     | Array, Union Find                    |
 | 120  | [Triangle](./leetcode/120.%20Triangle%20%28Medium%29.md)                                                                                                                                            | Medium     |                                      |
 | 118  | [Pascal's Triangle](./leetcode/118.%20Pascal%27s%20Triangle%20%28Easy%29.md)                                                                                                                        | Easy       | Array                                |
