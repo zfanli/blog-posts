@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  67   |  10  |   41   |  16  |
+|  68   |  11  |   41   |  16  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                                           |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------ |
@@ -84,6 +84,7 @@
 | 318  | [Maximum Product of Word Lengths](./leetcode/318.%20Maximum%20Product%20of%20Word%20Lengths%20%28Medium%29.md)                                                                                      | Medium     | Bit Manipulation                                 |
 | 307  | [Range Sum Query - Mutable](./leetcode/307.%20Range%20Sum%20Query%20-%20Mutable%20%28Medium%29.md)                                                                                                  | Medium     | Binary Indexed Tree, Segment Tree                |
 | 304  | [Range Sum Query 2D - Immutable](./leetcode/304.%20Range%20Sum%20Query%202D%20-%20Immutable%20%28Medium%29.md)                                                                                      | Medium     | DP                                               |
+| 303  | [Range Sum Query - Immutable](./leetcode/303.%20Range%20Sum%20Query%20-%20Immutable%20%28Easy%29.md)                                                                                                | Easy       | Array, Design, Prefix Sum                        |
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                                                                                    | Easy       | Math, Hash Table                                 |
 | 164  | [Maximum Gap](./leetcode/164.%20Maximum%20Gap%20%28Hard%29.md)                                                                                                                                      | Hard       | Sort                                             |
 | 150  | [Evaluate Reverse Polish Notation](./leetcode/150.%20Evaluate%20Reverse%20Polish%20Notation%20%28Medium%29.md)                                                                                      | Medium     | Stack                                            |
