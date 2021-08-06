@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  70   |  13  |   41   |  16  |
+|  72   |  15  |   41   |  16  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                                           |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------ |
@@ -88,6 +88,7 @@
 | 204  | [Count Primes](./leetcode/204.%20Count%20Primes%20%28Easy%29.md)                                                                                                                                    | Easy       | Math, Hash Table                                 |
 | 164  | [Maximum Gap](./leetcode/164.%20Maximum%20Gap%20%28Hard%29.md)                                                                                                                                      | Hard       | Sort                                             |
 | 150  | [Evaluate Reverse Polish Notation](./leetcode/150.%20Evaluate%20Reverse%20Polish%20Notation%20%28Medium%29.md)                                                                                      | Medium     | Stack                                            |
+| 145  | [Binary Tree Postorder Traversal](./leetcode/145.%20Binary%20Tree%20Postorder%20Traversal%20%28Easy%29.md)                                                                                          | Easy       | Stack, Tree, DFS, Binary Tree                    |
 | 144  | [Binary Tree Preorder Traversal](./leetcode/144.%20Binary%20Tree%20Preorder%20Traversal%20%28Easy%29.md)                                                                                            | Easy       | Stack, Tree, DFS, Binary Tree                    |
 | 135  | [Candy](./leetcode/135.%20Candy%20%28Hard%29.md)                                                                                                                                                    | Hard       | Array, Greedy                                    |
 | 128  | [Longest Consecutive Sequence](./leetcode/128.%20Longest%20Consecutive%20Sequence%20%28Medium%29.md)                                                                                                | Medium     | Array, Union Find                                |
@@ -95,7 +96,8 @@
 | 118  | [Pascal's Triangle](./leetcode/118.%20Pascal%27s%20Triangle%20%28Easy%29.md)                                                                                                                        | Easy       | Array                                            |
 | 114  | [Flatten Binary Tree to Linked List](./leetcode/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List%20%28Medium%29.md)                                                                              | Medium     | DFS, Tree                                        |
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md)                                                              | Medium     | Linked List, DFS                                 |
-| 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS                                        |
+| 104  | [Maximum Depth of Binary Tree](./leetcode/104.%20Maximum%20Depth%20of%20Binary%20Tree%20%28Easy%29.md)                                                                                              | Easy       | Tree, BFS, DFS, Binary Tree                      |
+| 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS, Binary Tree                           |
 | 97   | [Interleaving String](./leetcode/97.%20Interleaving%20String%20%28Medium%29.md)                                                                                                                     | Medium     | String, DP                                       |
 | 94   | [Binary Tree Inorder Traversal](./leetcode/94.%20Binary%20Tree%20Inorder%20Traversal%20%28Easy%29.md)                                                                                               | Easy       | Tree, Stack, DFS, Binary Tree                    |
 | 92   | [Reverse Linked List II](./leetcode/92.%20Reverse%20Linked%20List%20II%20%28Medium%29.md)                                                                                                           | Medium     | Linked List                                      |
