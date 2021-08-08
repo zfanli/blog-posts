@@ -28,6 +28,8 @@ jobs:
           ls blog/source/_posts/leetcode
           echo "⬆️ Commit & Push"
           cd blog
+          git config --global user.email "zfanli@outlook.com"
+          git config --global user.name "Richard"
           git add .
           git commit -m "DEPLOY: published from the leetcode notes repo"
           git remote add origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
