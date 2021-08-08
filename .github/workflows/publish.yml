@@ -23,6 +23,6 @@ jobs:
           echo "📒 Clone blog repo"
           git clone https://github.com/zfanli/zfanli.github.io.git blog
           echo "🔧 Merge posts"
-          python blog/.script/mergeposts.py ${{ github.workspace }}/leetcode leetcode
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/leetcode leetcode
           echo "🔍 Check the merge result"
           ls blog/source/_posts/leetcode
