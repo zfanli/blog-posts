@@ -1,0 +1,20 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main # default branch
+  workflow_dispatch:
+    branches:
+      - main # default branch
+
+jobs:
+  pages:
+    # if: ${{ contains(github.event.head_commit.message, 'PUBLISH') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+        git clone https://github.com/zfanli/zfanli.github.io.git blog
+        ls ${{ github.workspace }}
+        ls blog
