@@ -32,5 +32,5 @@ jobs:
           git config --global user.name "Richard"
           git add .
           git commit -m "DEPLOY: published from the leetcode notes repo"
-          git remote add origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
+          git remote set-url origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
           git push origin hexo-source
