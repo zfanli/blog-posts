@@ -6,10 +6,10 @@ tags:
   - DFS
   - BFS
   - Stack
+title: Binary Tree Traversal
+date: "2021-08-08T07:42:22.198Z"
 ---
 
-# Binary Tree Traversal
-
-# References
+## References
 
 - [[LeetCode] Introduction to Data Structure - Binary Tree](https://leetcode.com/explore/learn/card/data-structure-tree/)
