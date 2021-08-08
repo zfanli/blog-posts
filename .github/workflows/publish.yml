@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-        git clone https://github.com/zfanli/zfanli.github.io.git blog
-        ls ${{ github.workspace }}
-        ls blog
+      - name: Clone blog repo
+        run: |
+          git clone https://github.com/zfanli/zfanli.github.io.git blog
+          ls ${{ github.workspace }}
+          ls blog
