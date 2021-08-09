@@ -24,6 +24,8 @@ jobs:
           git clone https://github.com/zfanli/zfanli.github.io.git blog
           echo "🔧 Merge posts"
           python blog/.scripts/mergeposts.py ${{ github.workspace }}/leetcode blog/source/_posts/leetcode
+          rm -rf blog/source/images/leetcode
+          mv ${{ github.workspace }}/images/leetcode blog/source/images/leetcode
           echo "🔍 Check the merge result"
           ls blog/source/_posts/leetcode
           echo "⬆️ Commit & Push"
