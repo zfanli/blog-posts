@@ -46,17 +46,17 @@ def format():
                     fm["title"] = line.replace("# ", "").strip()
                     remove = line
                     break
-        if "excerpt" not in fm:
-            fm["excerpt"] = ""
+        # if "excerpt" not in fm:
+        #     fm["excerpt"] = ""
         if remove:
             lines = filter(lambda x: x != remove, lines)
 
-        # write back to file
-        with open(res[key][3], "w") as f:
-            f.write("---\n")
-            f.write(dump(fm, allow_unicode=True))
-            f.write("---\n")
-            f.writelines(lines)
+            # write back to file
+            with open(res[key][3], "w") as f:
+                f.write("---\n")
+                f.write(dump(fm, allow_unicode=True))
+                f.write("---\n")
+                f.writelines(lines)
 
     # return "\n".join(reversed(table))
 
