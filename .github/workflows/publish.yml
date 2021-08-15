@@ -9,8 +9,8 @@ on:
       - main # default branch
 
 jobs:
-  publish:
-    # if: ${{ contains(github.event.head_commit.message, 'PUBLISH') }}
+  leetcode:
+    if: ${{ contains(github.event.head_commit.message, 'LEETCODE') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -33,6 +33,33 @@ jobs:
           git config --global user.email "zfanli@outlook.com"
           git config --global user.name "Richard"
           git add .
-          git commit -m "DEPLOY: published from the leetcode notes repo"
+          git commit -m "DEPLOY: leetcode notes published"
+          git remote set-url origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
+          git push origin hexo-source
+  study:
+    if: ${{ contains(github.event.head_commit.message, 'STUDY') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.x" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
+      - name: Publish posts
+        run: |
+          echo "📒 Clone blog repo"
+          git clone https://github.com/zfanli/zfanli.github.io.git blog
+          echo "🔧 Merge posts"
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/study/css blog/source/_posts/study/css
+          rm -rf blog/source/images/study
+          mv ${{ github.workspace }}/images/css blog/source/images/study
+          echo "🔍 Check the merge result"
+          ls blog/source/_posts/study/css
+          echo "⬆️ Commit & Push"
+          cd blog
+          git config --global user.email "zfanli@outlook.com"
+          git config --global user.name "Richard"
+          git add .
+          git commit -m "DEPLOY: studies published"
           git remote set-url origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
           git push origin hexo-source

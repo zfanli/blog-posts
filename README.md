@@ -38,7 +38,7 @@
 
 | Total | Easy | Medium | Hard |
 | :---: | :--: | :----: | :--: |
-|  73   |  16  |   41   |  16  |
+|  74   |  17  |   41   |  16  |
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                                                                       |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------- |
@@ -95,6 +95,7 @@
 | 120  | [Triangle](./leetcode/120.%20Triangle%20%28Medium%29.md)                                                                                                                                            | Medium     | Array, DP                                                                    |
 | 118  | [Pascal's Triangle](./leetcode/118.%20Pascal%27s%20Triangle%20%28Easy%29.md)                                                                                                                        | Easy       | Array, DP                                                                    |
 | 114  | [Flatten Binary Tree to Linked List](./leetcode/114.%20Flatten%20Binary%20Tree%20to%20Linked%20List%20%28Medium%29.md)                                                                              | Medium     | Linked List, Stack, DFS, Tree, Binary Tree                                   |
+| 112  | [Path Sum](./leetcode/112.%20Path%20Sum%20%28Easy%29.md)                                                                                                                                            | Easy       | Tree, DFS, Binary Tree                                                       |
 | 109  | [Convert Sorted List to Binary Search Tree](./leetcode/109.%20Convert%20Sorted%20List%20to%20Binary%20Search%20Tree%20%28Medium%29.md)                                                              | Medium     | Linked List, Divider and Conquer, DFS, Tree, Binary Search Tree, Binary Tree |
 | 104  | [Maximum Depth of Binary Tree](./leetcode/104.%20Maximum%20Depth%20of%20Binary%20Tree%20%28Easy%29.md)                                                                                              | Easy       | Tree, BFS, DFS, Binary Tree                                                  |
 | 102  | [Binary Tree Level Order Traversal](./leetcode/102.%20Binary%20Tree%20Level%20Order%20Traversal%20%28Medium%29.md)                                                                                  | Medium     | Tree, BFS, Binary Tree                                                       |
