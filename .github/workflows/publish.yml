@@ -52,7 +52,7 @@ jobs:
           echo "🔧 Merge posts"
           python blog/.scripts/mergeposts.py ${{ github.workspace }}/study/css blog/source/_posts/study/css
           rm -rf blog/source/images/study
-          mv ${{ github.workspace }}/images/css blog/source/images/study
+          mv ${{ github.workspace }}/images/study blog/source/images/study
           echo "🔍 Check the merge result"
           ls blog/source/_posts/study/css
           echo "⬆️ Commit & Push"
