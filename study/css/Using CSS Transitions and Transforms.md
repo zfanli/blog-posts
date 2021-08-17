@@ -3,9 +3,10 @@ title: Using CSS Transitions and Transforms
 date: "2021-08-15T15:07:57.746Z"
 tags:
   - CSS
+categories:
+  - study
+  - css
 ---
-
-## 过渡 transitions
 
 CSS 过渡属性提供了一种方式给 CSS 属性变化添加过渡动画，过程中属性值的变化是由浏览器所决定，所以其过程也被叫做`隐式过渡（implicit transitions）`。也因其由浏览器原生实现，所以通常有更好的性能，但是在灵活性上有其局限。
 
@@ -18,13 +19,15 @@ CSS 过渡属性提供了一种方式给 CSS 属性变化添加过渡动画，�
 
 <!-- more -->
 
+## 过渡 transitions
+
 ### 定义过渡属性
 
 CSS 过渡属性可以轻易实现很出效果的动画。
 
 > 避免产生不适，点击 `start` 开始演示动画。
 
-<div class="w-100 p-3 my-3 border shadow-sm rounded d-flex align-items-center justify-content-center position-relative" style="height: 150px">
+<div class="example-container" style="height: 150px">
   <div class="example-def transition radius-hover" style="height: 50px; width: 50px; background-color: rgb(25,135,84)"></div>
   <span class="toggle position-absolute top-0 end-0 m-3 hover-pointer">start</span>
 </div>
@@ -65,7 +68,9 @@ div {
 
 #### `transition-timing-function`
 
-指定过度效果的缓动函数，一个描述数值变动速率的数学函数。
+指定过度效果的缓动函数，一个描述数值变动速率的数学函数，视觉表现为我们熟知的贝塞尔曲线。
+
+![timing-function](/images/study/css/TimingFunction.png)
 
 | Value                          | Description                                                 |
 | ------------------------------ | ----------------------------------------------------------- |
@@ -97,7 +102,7 @@ CSS 过渡可以针对不同属性分别设置持续时间、缓动函数和延�
 
 > 避免产生不适，点击 `start` 开始演示动画。
 
-<div class="w-100 p-3 my-3 border shadow-sm rounded d-flex align-items-center justify-content-evenly position-relative" style="height: 150px">
+<div class="example-container justify-content-evenly" style="height: 150px">
   <div id="example-def" class="example-def transition radius-hover text-white text-nowrap fs-6 d-flex align-items-center justify-content-center" style="height: 50px; width: 50px; background-color: rgb(25,135,84)"><small>指定 all</small></div>
   <div id="example-def" class="example-def transition transition-multiple radius-hover text-white text-nowrap fs-6 d-flex align-items-center justify-content-center" style="height: 50px; width: 50px; background-color: rgb(25,135,84)"><small>分别指定</small></div>
   <span class="toggle position-absolute top-0 end-0 m-3 hover-pointer">start</span>
@@ -186,15 +191,15 @@ CSS 过渡可以针对不同属性分别设置持续时间、缓动函数和延�
 
 同时 `TransitionEvent` 拥有下面属性：
 
-| Event                           | Description                                                                                    |
-| ------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `TransitionEvent.propertyName`  | 包含过渡动画关联属性名称的 `DOMString`                                                         |
-| `TransitionEvent.elapsedTime`   | 一个 `float` 表达过渡动画执行了多长时间，以秒为单位，不受延迟时间影响                          |
-| `TransitionEvent.pseudoElement` | 如果过渡动画执行对象是一个伪类元素，则为 `::` 开头的伪类元素名称的 `DOMString`，否则为空字符串 |
+| Property         | Description                                                                                    |
+| ---------------- | ---------------------------------------------------------------------------------------------- |
+| `.propertyName`  | 包含过渡动画关联属性名称的 `DOMString`                                                         |
+| `.elapsedTime`   | 一个 `float` 表达过渡动画执行了多长时间，以秒为单位，不受延迟时间影响                          |
+| `.pseudoElement` | 如果过渡动画执行对象是一个伪类元素，则为 `::` 开头的伪类元素名称的 `DOMString`，否则为空字符串 |
 
 > 鼠标悬停，或者点击 `start` 开始统计事件数据。
 
-<div class="border shadow-sm rounded my-3">
+<div class="example-container flex-column">
   <div class="w-100 p-3 d-flex align-items-center justify-content-center position-relative" style="height: 150px">
     <div id="transitionTarget" class="example-def transition radius-hover" style="height: 50px; width: 50px; background-color: rgb(25,135,84)"></div>
     <span class="toggle position-absolute top-0 end-0 m-3 hover-pointer">start</span>
@@ -225,6 +230,30 @@ target.addEventListener("transitionstart", (e) => {});
 
 ## 变换 transforms
 
+用下面的 Demo 尝试各种变换的效果，下面的设定可以修改，结果会实时反应到绿色方块上。你可以按 `reset` 按钮到默认状态。
+
+<style id="example-transform-style"></style>
+<div class="example-container example-transform flex-wrap" style="min-height: 240px">
+  <div class="control-panel d-flex flex-column highlight css my-3">
+    <pre class="bg-transparent m-0"
+      ><span class="line hover-pointer" contentEditable="true"
+        ><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">120px</span>, <span class="hljs-number">50px</span>);</span
+      ><span class="line hover-pointer" contentEditable="true"
+        ><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">0.5turn</span>);</span
+      ><span class="line hover-pointer" contentEditable="true"
+        ><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1.3</span>);</span
+      ><span class="line hover-pointer" contentEditable="true"
+        ><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>, <span class="hljs-number">20deg</span>);</span
+      ><span class="line hover-pointer" contentEditable="true"
+        ><span class="hljs-attribute">transform</span>: <span class="hljs-built_in">perspective</span>(<span class="hljs-number">500px</span>);</span
+    ></pre>
+  </div>
+  <div class="demo-panel flex-grow-1 d-flex align-items-center justify-content-center mb-3">
+    <div id="demo-transform" class="" style="height: 100px; width: 100px; background-color: rgb(25,135,84)"></div>
+  </div>
+  <span class="reset position-absolute top-0 end-0 m-3 mt-1 hover-pointer">reset</span>
+</div>
+
 ### 定义变换属性
 
 ### 3D 变换属性
@@ -239,61 +268,6 @@ target.addEventListener("transitionstart", (e) => {});
 
 <!-- Resources used by only this post -->
 <style>
-:root {
-  --bs-blue: #0d6efd;
-  --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
-  --bs-red: #dc3545;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
-  --bs-white: #fff;
-  --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
-  --bs-gray-100: #f8f9fa;
-  --bs-gray-200: #e9ecef;
-  --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
-  --bs-gray-500: #adb5bd;
-  --bs-gray-600: #6c757d;
-  --bs-gray-700: #495057;
-  --bs-gray-800: #343a40;
-  --bs-gray-900: #212529;
-  --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
-  --bs-success: #198754;
-  --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
-  --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary-rgb: 108, 117, 125;
-  --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
-  --bs-warning-rgb: 255, 193, 7;
-  --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
-  --bs-black-rgb: 0, 0, 0;
-  --bs-body-rgb: 33, 37, 41;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
-}
-</style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap-utilities.min.css" integrity="sha256-5+ExmMkiaI3keYQRLhNibJ5ZXnNuWRbwrXOAZoTXMFg=" crossorigin="anonymous">
-<style>
 .transition {
   cursor: pointer;
   transition: all .25s ease;
@@ -307,6 +281,24 @@ target.addEventListener("transitionstart", (e) => {});
 }
 .hover-pointer {
   cursor: pointer;
+}
+.example-container .line {
+  display: block;
+  margin: 2px 0;
+  padding: 5px;
+  width: 350px;
+  border-left: 4px transparent solid;
+  border-bottom: 1px transparent solid;
+  overflow: auto;
+}
+.example-container .line.active {
+  border-color: #198754;
+}
+.example-container .line:focus {
+  outline: none;
+}
+#demo-transform {
+  transition: all .25s ease;
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -337,13 +329,14 @@ $(function(){
   }, 1000)
   let timer = null
   // let timer = anime()
-  $('.toggle').click(function () {
+  const toggle = $('.example-container .toggle')
+  toggle.click(function () {
     if ($(this).text() === "stop") {
       clearInterval(timer)
-      $(this).text('start')
+      toggle.text('start')
     } else {
       timer = anime()
-      $(this).text('stop')
+      toggle.text('stop')
     }
   })
   // example-def end
@@ -373,5 +366,25 @@ $(function(){
   target.on('transitionrun', record('Run'))
   target.on('transitionstart', record('Started'))
   // example-event end
+  // example-transform start
+  const lines = $('.example-transform .line')
+    transformStyles = $('#example-transform-style')
+  lines.each(function(){
+    $(this).data('bk', $(this).html())
+  })
+  lines.click(function() {
+    lines.removeClass('active')
+    $(this).addClass('active')
+    transformStyles.html(`#demo-transform {${$(this).text()}}`)
+  })
+  lines.on('input', function() {
+    transformStyles.html(`#demo-transform {${$(this).text()}}`)
+  })
+  $('.example-transform .reset').click(() => lines.each(function() {
+    lines.removeClass('active')
+    $(this).html($(this).data('bk'))
+    transformStyles.html('')
+  }))
+  // example-transform end
 })
 </script>
