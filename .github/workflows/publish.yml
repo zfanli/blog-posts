@@ -63,3 +63,30 @@ jobs:
           git commit -m "DEPLOY: studies published"
           git remote set-url origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
           git push origin hexo-source
+  notes:
+    if: ${{ contains(github.event.head_commit.message, 'NOTES') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.x" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
+      - name: Publish posts
+        run: |
+          echo "📒 Clone blog repo"
+          git clone https://github.com/zfanli/zfanli.github.io.git blog
+          echo "🔧 Merge posts"
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/notes blog/source/_posts/notes
+          rm -rf blog/source/images/notes
+          mv ${{ github.workspace }}/images/notes blog/source/images/notes
+          echo "🔍 Check the merge result"
+          ls blog/source/_posts/notes/
+          echo "⬆️ Commit & Push"
+          cd blog
+          git config --global user.email "zfanli@outlook.com"
+          git config --global user.name "Richard"
+          git add .
+          git commit -m "DEPLOY: notes published"
+          git remote set-url origin https://zfanli:${{ secrets.ACCESS_TOKEN }}@github.com/zfanli/zfanli.github.io.git
+          git push origin hexo-source
