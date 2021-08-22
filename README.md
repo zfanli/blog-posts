@@ -1,4 +1,6 @@
-# LeetCode Memo
+# blog-posts
+
+## LeetCode Memo
 
 ### TODO
 
@@ -42,7 +44,7 @@
 
 | #    | Title                                                                                                                                                                                               | Difficulty | Topics                                                                       |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------- |
-| 1710 | [Maximum Units on a Truck](./leetcode/1710.%20Maximum%20Units%20on%20a%20Truck%20%28Easy%29.md)                                                                                                     | Easy       | Greedy, Sort                                                                 |
+| 1710 | [Maximum Units on a Truck](./leetcode/1710.%20Maximum%20Units%20on%20a%20Truck%20%28Easy%29.md)                                                                                                     | Easy       | Array, Greedy, Sorting                                                       |
 | 1696 | [Jump Game VI](./leetcode/1696.%20Jump%20Game%20VI%20%28Medium%29.md)                                                                                                                               | Medium     | Array, DP, Queue, Sliding Window, Heap (Priority Queue), Monotonic Queue     |
 | 1695 | [Maximum Erasure Value](./leetcode/1695.%20Maximum%20Erasure%20Value%20%28Medium%29.md)                                                                                                             | Medium     | Array, Hash Table, Sliding Window                                            |
 | 1689 | [Partitioning Into Minimum Number Of Deci-Binary Numbers](./leetcode/1689.%20Partitioning%20Into%20Minimum%20Number%20Of%20Deci-Binary%20Numbers%20%28Medium%29.md)                                 | Medium     | Greedy, String                                                               |
