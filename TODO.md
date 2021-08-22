@@ -4,6 +4,8 @@
 
 - [ ] shapes
 - [ ] bfc, clear float
+- [x] transition & transform
+- [ ] flex box & grid
 
 ## JS
 
@@ -56,6 +58,14 @@
 
 - [ ] whatever
 
+# Node.js
+
+- [ ] whatever
+
 # Python
 
 - [ ] whatever
+
+# GitHug
+
+- [ ] Actions
