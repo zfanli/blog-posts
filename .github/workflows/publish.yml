@@ -51,6 +51,7 @@ jobs:
           git clone https://github.com/zfanli/zfanli.github.io.git blog
           echo "🔧 Merge posts"
           python blog/.scripts/mergeposts.py ${{ github.workspace }}/study/css blog/source/_posts/study/css
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/study/html blog/source/_posts/study/html
           rm -rf blog/source/images/study
           mv ${{ github.workspace }}/images/study blog/source/images/study
           echo "🔍 Check the merge result"
