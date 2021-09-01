@@ -78,7 +78,9 @@ jobs:
           echo "📒 Clone blog repo"
           git clone https://github.com/zfanli/zfanli.github.io.git blog
           echo "🔧 Merge posts"
-          python blog/.scripts/mergeposts.py ${{ github.workspace }}/notes blog/source/_posts/notes
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/notes/homelab blog/source/_posts/notes/homelab
+          python blog/.scripts/mergeposts.py ${{ github.workspace }}/notes/swift blog/source/_posts/notes/swift
+          python blog/.scripts/mergeposts.py "${{ github.workspace }}/notes/just notes" "blog/source/_posts/notes/just notes"
           rm -rf blog/source/images/notes
           mv ${{ github.workspace }}/images/notes blog/source/images/notes
           echo "🔍 Check the merge result"

@@ -20,6 +20,8 @@
 - [ ] 宏任务和微任务(?)
 - [ ] DOM & BOM
 - [ ] async, await
+- [ ] 状态和异步流管理
+- [ ] 图表工具 echart，antV
 
 ## JS - Event
 

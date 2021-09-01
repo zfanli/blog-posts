@@ -7,7 +7,6 @@ tags:
   - BFS
   - Stack
 title: Binary Tree Traversal
-date: '2021-08-08T07:42:22.198Z'
 ---
 
 ## References
