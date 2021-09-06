@@ -53,13 +53,37 @@ ECMA 国际标准化组织为 ECMAScript 语言规格开发了一套测试代码
 
 ## ES11（ES2020）
 
+### `BigInt`
+
 ## ES10（ES2019）
+
+### 数组实例：`.flat()` 和 `.flatMap()`
+
+### 字符串实例：`.trimStart()` 和 `.trimEnd()`
 
 ## ES9（ES2018）
 
+### 扩展运算符 Spread Operator
+
+### Rest 参数
+
+### 异步迭代 Asynchronous Iteration
+
+### 正则表达式的更新
+
 ## ES8（ES2017）
 
+### 异步操作：`async` 和 `await`
+
+### `Object.values()` 和 `Object.entries()`
+
+### `Object.getOwnPropertyDescriptors()`
+
+### 字符串实例：`.padStart()` 和 `.padEnd()`
+
 ## ES7（ES2016）
+
+### 数组实例：`.includes()`
 
 ## ES6（ES2015）
 
@@ -75,25 +99,17 @@ ES6 是 ECMAScript 自 97 年的初版发布以来的最大的一次拓展性更
 
 ### `for of` 循环
 
-### 扩展运算符 Spread Operator
-
 ### 箭头函数 Arrow Functions
 
 ### 默认参数 Default Params
-
-### Rest 参数
-
-### 数组实例：`.includes()`
-
-### 字符串实例：`.padStart()` 和 `.padEnd()`
 
 ### 类的声明 Class Declaration
 
 ### 模块 Module
 
-### 异步操作：`async` 和 `await`
-
 ### 数据结构：`Set`
+
+### Symbol
 
 ## References
 
