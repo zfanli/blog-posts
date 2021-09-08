@@ -49,67 +49,272 @@ ECMA 国际标准化组织为 ECMAScript 语言规格开发了一套测试代码
 | V8               | Google Chrome 84, Microsoft Edge 84, Opera 70 | 100% | 98%        | 100%       | 100%          |
 | JavaScriptCore   | Safari 13.1                                   | 99%  | 99%        | 100%       | 84%           |
 
-## ES12（ES2021）
+### ES12（ES2021）
 
-## ES11（ES2020）
+#### 字符串实例：`.replaceAll()`
 
-### `BigInt`
+或许你注意到 JavaScript 中的字符串实例上的置换方法一次只能替换一个值。现在可以一次置换所有匹配值了。方便。
 
-## ES10（ES2019）
+```javascript
+let str =
+  "ES2021 was published in June 2021, and ES2020 was published in June 2020";
+// ...
+str.replace("2020", "11");
+// "ES2021 was published in June 2021, and ES11 was published in June 2020"
+str.replaceAll("2021", "2019");
+// "ES2019 was published in June 2019, and ES2020 was published in June 2020"
+```
 
-### 数组实例：`.flat()` 和 `.flatMap()`
+#### Promise `.any()`
 
-### 字符串实例：`.trimStart()` 和 `.trimEnd()`
+Promise 机制中有几个 API 用来处理一系列 Promise 的结果，ES2021 添加了 `.any()` 方法，有些类似于 `.race()`，但是不会再发生错误时立刻中止。基本覆盖了所有使用场景。
 
-## ES9（ES2018）
+| Method                             | Description                                 |
+| ---------------------------------- | ------------------------------------------- |
+| `promise.all([p1, p2, p3])`        | 等待所有 promise 完成，在发生错误时中止     |
+| `promise.race([p1, p2, p3])`       | 等待直到第一个 promise 完成或发生错误       |
+| `promise.allSettled([p1, p2, p3])` | 等待所有 promise 完成                       |
+| `promise.any([p1, p2, p3])`        | 等待直到第一个 promise 完成，无视发生的错误 |
 
-### 扩展运算符 Spread Operator
+#### 逻辑赋值运算符 Logical Assignment Operator
 
-### Rest 参数
+逻辑赋值运算符让以往的写法更加简洁易读。参考下面的代码例子。算是语法糖。
 
-### 异步迭代 Asynchronous Iteration
+```javascript
+// 以往的写法
+a || (a = "default");
+// 使用逻辑赋值运算符
+a ||= "default";
+```
 
-### 正则表达式的更新
+可以做逻辑赋值的运算符如下。
 
-## ES8（ES2017）
+| 运算符  | Description                                                   |
+| ------- | ------------------------------------------------------------- |
+| `\|\|=` | 左边为 `falsy` 时赋值，`false`、`0`、`""` 都属于 `falsy`      |
+| `&&=`   | 左边为 `truthy` 时赋值，非 `falsy` 的值都属于 `truthy`        |
+| `??=`   | 左边为 `nullish` 时赋值，`null` 和 `undefined` 属于 `nullish` |
 
-### 异步操作：`async` 和 `await`
+#### 数值分隔符 Numerical Separator
 
-### `Object.values()` 和 `Object.entries()`
+数值中添加下划线进行分隔，提高数值的可读性。
 
-### `Object.getOwnPropertyDescriptors()`
+```javascript
+const billion = 1_000_000_000;
+```
 
-### 字符串实例：`.padStart()` 和 `.padEnd()`
+#### WeakRef & Finalization Registry
 
-## ES7（ES2016）
+`WeakRef` 会创建一个对象的弱引用，这种引用不会影响对象被垃圾回收（GC），如果目标对象不存在弱引用以外的引用的话，在脚本引擎执行垃圾回收时会销毁该对象。
 
-### 数组实例：`.includes()`
+弱引用在处理大文件缓存和映射的场景时比较有用，比如有一组图片文件，你想给每个图片进行命名但又不希望名称的映射让其无法被垃圾回收机制销毁，这时使用弱引用可以满足这个需求。用弱引用将字符串与图片一一绑定，而图片在不再被使用时会随时被 GC。
 
-## ES6（ES2015）
+> 不过也因为弱引用的目标对象可能随时被 GC，使用时需要慎重考虑。
+
+```javascript
+// An object to reference weakly
+const obj = { name: "John", age: 18, favColor: "pink" };
+
+// creating a WeakRef of this object
+const weakRefObj = new WeakRef(obj);
+
+// To read the weak ref object
+const weakRefInstance = weakRefObj.deref();
+
+console.log(weakRefInstance.age);
+// Output: 18
+```
+
+Finalization Registry 是配合 `WeakRef` 使用的一个机制。**Finalization** 指的是一个对象不再使用后执行清除操作的过程。而 Finalization Registry 本质上就是一个对象被 GC 之后的回调函数。
+
+```javascript
+// create a registry
+const registry = new FinalizationRegistry((heldValue) => {
+  // Do something here
+});
+
+//register any objects you want a cleanup callback for
+registry.register(theObject, "some value");
+```
+
+### ES11（ES2020）
+
+#### 全局对象 `globalThis`
+
+在浏览器中 `globalThis` 实际指向 `window` 对象，但是 Worker 中我们无法直接使用全局对象，而是需要通过 `self` 访问，这造成在对不同程序进行开发时全局对象的名称不同。为了解决这个问题，ES2020 引入了 `globalThis` 统一了每个环境下的全局对象名称。
+
+#### 新数据类型：`BigInt`
+
+JavaScript 中的 `Number` 类型数据以双精度 64 位浮点数（float64）表示，这表示其对整数值来说只保证能正确显示 -2^53 ～ 2^53 的值。
+
+> From Wikipedia
+>
+> - Integers from −253 to 253 (−9,007,199,254,740,992 to 9,007,199,254,740,992) can be exactly represented
+> - Integers between 253 and 254 = 18,014,398,509,481,984 round to a multiple of 2 (even number)
+> - Integers between 254 and 255 = 36,028,797,018,963,968 round to a multiple of 4
+
+看下面的例子，我们先拿到能保证安全操作的最大数字，然后尝试对比这个值加 1 和加 2 的结果，你会发现结果是 `true`。
+
+```javascript
+let num = Number.MAX_SAFE_INTEGER;
+// ...
+num;
+// 9007199254740991
+num + 1 === num + 2;
+// true
+```
+
+ES2020 中引入了 `BigInt` 数据类型来处理任意长度的数字，你可以使用其构造函数声明，也可以在数字后添加后缀 `n` 实现。
+
+```javascript
+let num = BigInt(Number.MAX_SAFE_INTEGER);
+// ...
+num;
+// 9007199254740991n
+num + 1n === num + 2n;
+// false
+```
+
+`BigInt` 使用时需要注意下面限制：
+
+- `BigInt` 不能直接与 `Number` 进行运算；
+- `BigInt` 可以与 `Number` 进行比较，但严格比较（`===`）就算字面量相等也会返回 `false`；
+- 由于一元加号运算符（`+`）在 JavaScript 中存在隐式数值转换，`BigInt` 使用 `+1n` 的形式表达时会报类型转换错误；
+- `BigInt` 与 `Number` 之间换算会损失精度，使用时需要避免频繁换算；
+- `BigInt` 的运算非常量时间，不适合用于密码学计算。
+
+#### Promise `.allSettled()`
+
+新的 Promise 方法。等待到所有 Promise 都结束后触发。适合等待所有依赖都完成后立即执行的场景。
+
+```javascript
+const p1 = new Promise((resolve) => resolve());
+const p2 = new Promise((resolve, reject) => setTimeout(reject, 200));
+
+Promise.allSettled([p1, p2]).then((res) =>
+  console.log(res.map((a) => a.status))
+);
+// (2) ["fulfilled", "rejected"]
+```
+
+#### 空值结合运算符 Nullish Coalescing Operator
+
+首先要解释 **Nullish**，在 JavaScript 中 `undefined` 和 `null` 属于 **Nullish**，空值结合运算符的意义在于判断变量是否是空值（Nullish），如果是的话则返回右边的值，通常用来做默认值赋值。
+
+```javascript
+// 对比 `||` 运算符，只要左边是 falsy 就返回右边的的结果
+undefined || "some string";
+// "some string"
+null || "some string";
+// "some string"
+false || "some string";
+// "some string"
+0 || "some string";
+// "some string"
+
+// 空值结合运算符 `??`，仅在 nullish 时返回右边的的结果
+undefined ?? "some string";
+// "some string"
+null ?? "some string";
+// "some string"
+false ?? "some string";
+// false
+0 ?? "some string";
+// 0
+```
+
+#### 可选链运算符 Optional Chaining Operator
+
+可选链运算符在链式调用中处理空值非常有用，可以完美避免空指针问题。
+
+```javascript
+const obj = { info: { name: "John", age: 17 } };
+// ...
+obj?.info?.name;
+// "John"
+obj?.any?.name;
+// undefined
+```
+
+### ES10（ES2019）
+
+#### 数组实例：`.flat()` 和 `.flatMap()`
+
+ES2019 给数组添加了扁平化方法 `.flat(depth=1)`，这个方法接收一个参数 `depth` 表示需要提取的嵌套层数，默认为 1 层。
+
+```javascript
+// 默认只提取一层嵌套数组进行扁平化
+[1, 2, [3, 4, 5, [6, 7, [8], 9], 10]].flat();
+// (7) [1, 2, 3, 4, 5, Array(4), 10]
+
+// 可以指定层数，或者使用 `Infinity` 表示提取所有嵌套层数
+[1, 2, [3, 4, 5, [6, 7, [8], 9], 10]].flat(Infinity);
+// (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+ES2019 还给数组添加了另一个方法 `.flatMap(func[, thisArg])`，这个方法与 `.map()` 类似，但是会将返回的数组结果进行扁平化。
+
+```javascript
+let arr1 = ["it's Sunny in", "", "California"];
+
+arr1.map((x) => x.split(" "));
+// [["it's","Sunny","in"],[""],["California"]]
+
+arr1.flatMap((x) => x.split(" "));
+// ["it's","Sunny","in", "", "California"]
+```
+
+#### 字符串实例：`.trimStart()` 和 `.trimEnd()`
+
+### ES9（ES2018）
+
+#### 扩展运算符 Spread Operator
+
+#### Rest 参数
+
+#### 异步迭代 Asynchronous Iteration
+
+#### 正则表达式的更新
+
+### ES8（ES2017）
+
+#### 异步操作：`async` 和 `await`
+
+#### `Object.values()` 和 `Object.entries()`
+
+#### `Object.getOwnPropertyDescriptors()`
+
+#### 字符串实例：`.padStart()` 和 `.padEnd()`
+
+### ES7（ES2016）
+
+#### 数组实例：`.includes()`
+
+### ES6（ES2015）
 
 ES6 是 ECMAScript 自 97 年的初版发布以来的最大的一次拓展性更新。ES6 的目标在于为大型应用开发、库的创建和以 ECMAScript 为标准的各种语言提供更好的支持。ES6 主要的更新内容包括模块化特性、类的声明、块级作用域、迭代器和生成器、非同步的 Promise、解构模式和尾调用优化。内置的库被扩展为支持新增的 map、set 和二进制数值数组结构，同时字符串和正则表达式支持新增的 Unicode 补充字符。这些内置库现在可以通过子类进行拓展。
 
-### `let` 和 `const`
+#### `let` 和 `const`
 
-### 模版字符串 Template Literals
+#### 模版字符串 Template Literals
 
-### 对象解构/数组结构 Objects/Arrays Destructuring
+#### 对象解构/数组结构 Objects/Arrays Destructuring
 
-### 对象字面量 Object Literals
+#### 对象字面量 Object Literals
 
-### `for of` 循环
+#### `for of` 循环
 
-### 箭头函数 Arrow Functions
+#### 箭头函数 Arrow Functions
 
-### 默认参数 Default Params
+#### 默认参数 Default Params
 
-### 类的声明 Class Declaration
+#### 类的声明 Class Declaration
 
-### 模块 Module
+#### 模块 Module
 
-### 数据结构：`Set`
+#### 数据结构：`Set`
 
-### Symbol
+#### Symbol
 
 ## References
 

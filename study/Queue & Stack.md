@@ -78,6 +78,152 @@ if __name__ == "__main__":
 
 上面例子中我们为了熟悉队列的特性写了一个简单但是低效的队列实现。循环队列是一个更加高效的队列，我们使用一个固定尺寸的数组储存元素，以及 2 个指针来标志队列的头和尾。这样做的目的在于重复使用内存空间。
 
+```python
+class MyCircularQueue:
+
+    def __init__(self, k: int):
+        self.queue = [-1] * k
+        self.front = self.rear = -1
+        self.max = k
+
+    def enQueue(self, value: int) -> bool:
+        if self.isFull():
+            return False
+
+        if self.isEmpty():
+            self.front = self.rear = 0
+        else:
+            self.rear += 1
+            self.rear %= self.max
+
+        self.queue[self.rear] = value
+        return True
+
+    def deQueue(self) -> bool:
+        if self.isEmpty():
+            return False
+        if self.front == self.rear:
+            self.front = self.rear = -1
+        else:
+            self.front += 1
+            self.front %= self.max
+        return True
+
+    def Front(self) -> int:
+        if self.isEmpty():
+            return -1
+        return self.queue[self.front]
+
+    def Rear(self) -> int:
+        if self.isEmpty():
+            return -1
+        return self.queue[self.rear]
+
+    def isEmpty(self) -> bool:
+        return self.front == -1
+
+    def isFull(self) -> bool:
+        return (self.rear + 1) % self.max == self.front
+```
+
+### Queue: Built-in API
+
+很多语言都有内置的队列数据结构，我们不需要重复造轮子。
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // 1. Initialize a queue.
+        Queue<Integer> q = new LinkedList();
+        // 2. Get the first element - return null if queue is empty.
+        System.out.println("The first element is: " + q.peek());
+        // 3. Push new element.
+        q.offer(5);
+        q.offer(13);
+        q.offer(8);
+        q.offer(6);
+        // 4. Pop an element.
+        q.poll();
+        // 5. Get the first element.
+        System.out.println("The first element is: " + q.peek());
+        // 7. Get the size of the queue.
+        System.out.println("The size is: " + q.size());
+    }
+}
+```
+
+```python
+if __name__ == "__main__":
+    q = collections.deque()
+    print("After init, is the queue empty?", len(q) == 0)
+    q.append(0)
+    print("0 is enqueued, is the queue empty?", len(q) == 0)
+    print("Peek the front of the queue:", q[0])
+    q.append(1)
+    q.append(2)
+    print("1 and 2 are enqueued, is the queue empty?", len(q) == 0)
+    print("Try to perform dequeue, result:", q.popleft())
+    print("Let's peek the front now:", q[0])
+    print("Try to perform dequeue, result:", q.popleft())
+    print("Let's peek the front now:", q[0])
+    print("Try to perform dequeue, result:", q.popleft())
+    print("All the 3 elements are dequeued, is the queue empty?", len(q) == 0)
+    print("Can we perform dequeue anymore?", len(q) != 0)
+```
+
+### Queue 和 BFS
+
+BFS 的普遍使用场景是遍历树或图，和寻找根节点到目标节点的最短路径。而很多 BFS 算法都会使用队列数据结构实现。
+
+#### BFS 代码模版：寻找最短路径
+
+```python
+def bfs(root, target):
+    q = collections.deque([root])
+    step = 0
+    while q:
+        step += 1
+        for _ in range(len(q)):
+            node = q.popleft()
+            if node == target:
+                return step
+            for n in node.neighbors:
+                q.append(n)
+    return -1
+```
+
+队列可以帮助 BFS 算法完成类似树的层序遍历的方式去遍历目标数据。上面的代码模板中：
+
+1. 当队列 `q` 中存在元素时，进行下一轮遍历；
+   - 在这轮遍历中我们对当前 `q` 的长度的元素进行处理，依次将其取出与目标对比；
+   - 如果遇到目标则返回步数；
+   - 否则将当前节点的所有相邻节点放入队列 `q`；
+2. 我们用一个变量 `step` 保存目前处理的步数，在每次进入循环时更新步数。
+
+这个代码模版主要适用于树结构，子节点之间不存在相同子节点。
+
+### BFS 代码模版：重复节点只遍历一次
+
+在遍历图的时候，每个节点的相邻节点可能是已经遍历过的节点，使用上面的代码将会进入无限循环，此时记录访问过的节点非常重要。我们可以通过一个 Hash 表来记录哪些节点已经被访问过。下面代码模版在上面的例子中添加了对重复节点的控制，使其可以对图进行遍历。
+
+```python
+def bfs(root, target):
+    q = collections.deque([root])
+    visited = set([root])
+    step = 0
+    while q:
+        step += 1
+        for _ in range(len(q)):
+            node = q.popleft()
+            if node == target:
+                return step
+            for n in node.neighbors:
+                if n not in visited:
+                    q.append(n)
+                    visited.add(n)
+    return -1
+```
+
 ## Reference
 
 - [[LeetCode] Introduction to Data Structure - Queue & Stack](https://leetcode.com/explore/learn/card/queue-stack/)
