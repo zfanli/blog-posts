@@ -471,11 +471,106 @@ ES2018 还添加了**后行断言**特性。在此之前 JavaScript 中的正则
 
 #### 异步操作：`async` 和 `await`
 
+ES2017 引入了异步函数 （Async Functions）。其本质上是 Promise 和生成器的组合，以简化 Promise 的调用。异步函数的写法实际上就是用 `async` 和 `await` 代替了生成器函数的 `*` 和 `yield` 关键字。
+
 #### `Object.values()` 和 `Object.entries()`
+
+ES2017 给 `Object` 添加了 2 个静态方法用来方便对象的便利。
+
+```javascript
+const obj = { name: "John", age: 17, gender: "male" };
+
+Object.values(obj);
+// (3) ["John", 17, "male"]
+
+Object.entries(obj);
+// (3) [Array(2), Array(2), Array(2)]
+// 0: (2) ["name", "John"]
+// 1: (2) ["age", 17]
+// 2: (2) ["gender", "male"]
+// length: 3
+// [[Prototype]]: Array(0)
+```
 
 #### `Object.getOwnPropertyDescriptors()`
 
+ES2017 给 `Object` 添加了方法 `.getOwnPropertyDescriptors()` 用来获取对象非继承的所有属性的描述符。与 ES5 中存在的 `.getOwnPropertyDescriptor()` 功能类似，但是这次添加的方法返回**所有**属于对象自身的 property 的 attribute 数组。
+
+在 JavaScript 的对象中，每个 property 都有一组 attribute 描述这个属性的一些特性。由于这俩个词的中文含义相似，所以在一起出现时通常不做翻译，但如果遇到需要翻译时通常翻译为属性（property）和特性（attribute）。
+
+目前存在以下描述符（Descriptor）：
+
+| Name           | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| `value`        | 属性值                                                       |
+| `writable`     | 属性值是否可写入                                             |
+| `get`          | 属性的 getter                                                |
+| `set`          | 属性的 setter                                                |
+| `configurable` | 属性是否可以配置，影响属性能否被删除以及其他属性能不能被修改 |
+| `enumerable`   | 属性是否可以可枚举                                           |
+
+这个方法的添加是因为 `Object.assign()` 在复制对象时不会考虑属性的描述符，也就是说将定义了 `setter` 的 property 使用 `Object.assign()` 方式赋值给另一个对象时只有值（`value`）会被复制，`setter` 处理会被丢失。在 `.getOwnPropertyDescriptors()` 被添加后，可以使用 `Object.defineProperties()` 来配合复制描述符。
+
+```javascript
+const obj = {
+  set name(str) {
+    this._name = str;
+  },
+  get name() {
+    return `Name: ${this._name}`;
+  },
+};
+
+// obj 定义了 name 的 setter，在设置这个属性时会编辑字符串
+obj.name = "John";
+obj.name;
+// "Name: John"
+
+// 通过 Object.assign() 将 obj 的属性拷贝给 copied
+const copied = Object.assign({}, obj);
+// obj 已经编辑过的值被保留了
+copied.name;
+// "Name: John"
+
+// 尝试给 copied 的 name 重新复制
+copied.name = "Howard";
+// obj 的 setter 没有被复制，所以属性被直接赋值
+copied.name;
+// "Howard"
+
+// 尝试给 obj 的 name 赋值
+obj.name = "Howard";
+// setter 生效并编辑了字符串
+obj.name;
+// "Name: Howard"
+
+// 使用 .getOwnPropertyDescriptors() 进行复制并保留 setter
+const kept = Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj));
+kept.name = "Sheldon";
+kept.name;
+// "Name: Sheldon"
+```
+
 #### 字符串实例：`.padStart()` 和 `.padEnd()`
+
+ES2017 添加了字符串实例方法 `.padStart()` 和 `.padEnd()`，两功能就如字面意思。提升了字符串处理的能力。
+
+```javascript
+const str = "Test String";
+// Test String
+
+// 只指定长度时将用空格填充
+console.log(str.padStart(15));
+//     Test String
+
+// 或者指定填充字符
+console.log(str.padStart(15, "-"));
+// ----Test String
+
+// padEnd 相同
+console.log(str.padEnd(15, "!"));
+// Test String!!!!
+```
 
 ### ES7（ES2016）
 
