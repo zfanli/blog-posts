@@ -224,6 +224,17 @@ def bfs(root, target):
     return -1
 ```
 
+## Stack: Last In First Out
+
+后进先出的栈结构中，我们**先处理最后被添加进来的元素**。栈有入栈和出栈两个操作，入栈时将元素添加到栈顶，出栈时移出栈顶的元素。
+
+| Term | Explanation |
+| ---- | ----------- |
+| push | 入栈        |
+| pop  | 出栈        |
+
+> 栈的实现比较简单，并且每种语言都有原生实现，所以略过实现代码。
+
 ## Reference
 
 - [[LeetCode] Introduction to Data Structure - Queue & Stack](https://leetcode.com/explore/learn/card/queue-stack/)
