@@ -132,7 +132,7 @@ const registry = new FinalizationRegistry((heldValue) => {
   // Do something here
 });
 
-//register any objects you want a cleanup callback for
+// register any objects you want a cleanup callback for
 registry.register(theObject, "some value");
 ```
 
@@ -1318,7 +1318,7 @@ ES6 提供了 11 个内置的 Symbol 值，指向语言内部使用的方法。
 | `Symbol.iterator`           | 定义对象的迭代器，在遇到需要迭代对象时会自动调用                                             |
 | `Symbol.toPrimitive`        | 对象被转为初始类型时会调用该方法                                                             |
 | `Symbol.toStringTag`        | 当调用对象的 `.toString()` 时会调用，用来替换 `[object Object]` 中的 `Object` 表示对象的类型 |
-| `Symbol.unscopables`        | 一些列属性在使用 `with` 关键字时会被 `with` 环境排除                                         |
+| `Symbol.unscopables`        | 一系列属性在使用 `with` 关键字时会被 `with` 环境排除                                         |
 
 ## References
 

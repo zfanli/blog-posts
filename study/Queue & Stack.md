@@ -235,6 +235,27 @@ def bfs(root, target):
 
 > 栈的实现比较简单，并且每种语言都有原生实现，所以略过实现代码。
 
+### Stack 和 DFS
+
+大多数情况如果可以使用 BFS 解决一个问题，那么同样也能用 DFS 来解决这个问题。这两种方法的最重要的区别在于**遍历的顺序**。
+
+不同于 BFS 的顺序，应用 DFS 时，你最先访问的节点可能并非距离根节点最近的节点。换句话说，你遍历完的第一条路径也许并非最短路径。
+
+#### DFS 代码模版：递归
+
+递归方式不会显式使用栈的数据结构，但是还是会隐式的使用**调用栈**来完成递归的过程。下面是一个递归 DFS 的模版，用来查找目标节点是否存在于所有节点之中。
+
+```python
+def dfs(node: Node, target: Node, visited: List[Node]) -> bool:
+    if node == target: return True
+    for n in node.neighbors:
+        if n not in visited:
+            visited.append(n)
+            if dfs(n, target, visited):
+                return True
+    return False
+```
+
 ## Reference
 
 - [[LeetCode] Introduction to Data Structure - Queue & Stack](https://leetcode.com/explore/learn/card/queue-stack/)
