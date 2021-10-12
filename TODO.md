@@ -23,6 +23,15 @@ test
 - [ ] DOM & BOM
 - [x] async, await
 
+## JS Libraries
+
+- [ ] crypto-js 一个前端加密
+- [ ] dom-to-image 一个 DOM 转图片工具
+- [ ] handlebars 一个语义化模版解析工具
+- [ ] dayjs 一个极简的日期工具库
+- [ ] core-js 用来给 JS 运行环境添加未支持的语言特性
+- [ ] file-saver 用来储存 Web App 生成的文件的工具
+
 ## JS - Event
 
 - [ ] event bubble
@@ -71,6 +80,6 @@ test
 
 - [ ] whatever
 
-# GitHug
+# GitHub
 
 - [ ] Actions
