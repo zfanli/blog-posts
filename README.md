@@ -2,6 +2,21 @@
 
 ## LeetCode Memo
 
+发布方式：通过 Git 提交评论触发 GitHub Action 执行发布操作。
+
+```shell
+git commit -m "<POST_TYPE>: <COMMENT>"
+
+# Example
+git commit -m "NOTES: Publish a new note"
+```
+
+| `POST_TYPE` | 说明          |
+| ----------- | ------------- |
+| `NOTES`     | 笔记          |
+| `STUDY`     | 研究笔记      |
+| `LEETCODE`  | LeetCode 笔记 |
+
 ### TODO
 
 一些没理解的点暂时做一下记录，方便有时间来研究。
